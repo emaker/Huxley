@@ -1,0 +1,14 @@
+eMAKER Huxley
+
+Created by Jean-Marc Giacalone 2011-03-01
+
+License GPL
+
+No guarantee is made that the files contained in this project will be free
+from design faults. The user accepts the risk that some issues may arise
+from printing and assembling the files contained within this project. Users
+are however encouraged to publish errors/improvements back to the originator.
+
+./Openscad/huxley_sheets.scad is the master. Output from this file is used
+in production.
+
