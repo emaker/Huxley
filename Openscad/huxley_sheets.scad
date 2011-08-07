@@ -57,7 +57,7 @@ module upplate3(){
 				translate([22.5,-23.6,0]) cube([12,5,12]);
 				#translate([13.25,-15,11.3]) cylinder(h=0.3, r=1.8, $fn=20);
 			}
-		translate([80,30,6]) rotate([90,0,90]) import_stl("../stl/idler_.stl");
+		translate([80,30,6]) rotate([90,0,90]) import_stl("../stl/idler.stl");
 	}
 }
 module upplate4(){
