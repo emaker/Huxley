@@ -1,6 +1,10 @@
 include <parametric_involute_gear_v5.0.scad>
 //small gear was 9tooth, 200pitch
-//small gear was 53tooth, 200pitch
+//large gear was 53tooth, 200pitch
+
+//small gear was 9tooth, 260pitch
+//large gear was 39tooth, 260pitch
+
 
 translate([0,0,14]) rotate([0,180,20])
 	small_gear();
@@ -11,8 +15,8 @@ translate([5,0,0])
 module small_gear(){
 translate ([0,0,0]) difference(){
 	gear (
-	number_of_teeth=9,
-	circular_pitch=260, diametral_pitch=false,
+	number_of_teeth=11,
+	circular_pitch=200, diametral_pitch=false,
 	pressure_angle=28,
 	clearance = 0.2,
 	gear_thickness=7,
@@ -41,8 +45,8 @@ translate ([0,0,0]) difference(){
 module large_gear(){
 translate ([34.667,0,0]) difference(){
 	gear (
-	number_of_teeth=39,
-	circular_pitch=260, diametral_pitch=false,
+	number_of_teeth=53,
+	circular_pitch=200, diametral_pitch=false,
 	pressure_angle=28,
 	clearance = 0.2,
 	gear_thickness=5,

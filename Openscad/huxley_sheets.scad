@@ -48,7 +48,7 @@ module upplate3(){
 	translate([0,0,0]) rotate([0,0,0]) union()
 	{
 		translate([58,70,0]) rotate([0,0,-90]) import_stl("../stl/nozzle-mounting.stl");
-		translate([27,20,16]) rotate([180,0,0]) small_gear();
+		translate([27,20,14]) rotate([180,0,0]) small_gear();
 		translate([-10,70,0]) rotate([0,0,0]) large_gear();
 		translate([60,20,0]) rotate([0,0,0])
 			union(){
@@ -57,7 +57,7 @@ module upplate3(){
 				translate([22.5,-23.6,0]) cube([12,5,12]);
 				#translate([13.25,-15,11.3]) cylinder(h=0.3, r=1.8, $fn=20);
 			}
-		translate([80,30,6]) rotate([90,0,90]) import_stl("../stl/idler.stl");
+		translate([75,29,6]) rotate([0,0,0]) import_stl("../stl/idler.stl");
 	}
 }
 module upplate4(){
@@ -107,7 +107,7 @@ translate([30,75,0])
 	}
 }
 
-platenum=5;
+platenum=4;
 %cube(size=[130,130,0.01],center=true);
 if(platenum==1)
 	translate([-43,-49,0]) upplate1();
