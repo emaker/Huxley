@@ -17,15 +17,27 @@ module x_idler_body()
 	difference(){
 		union(){
 		translate([0,0,0]) rotate([0,0,90]) import_stl("../stl/x-idler-bracket_.stl");
-		translate([-2.5,28,20.15]) rotate([90,0,90])
-			bushing(true,10);
-		translate([-53.5,28,20.15]) rotate([90,0,90])
-			bushing(true,10);
+		//translate([-4,28,20.15]) rotate([90,0,90])
+		//	bushing(true,10.5);
+		//translate([-52.5,28,20.15]) rotate([90,0,90])
+		//	bushing(true,10.5);
+		//translate([-4,21,0])
+		//	cube([10.5,10,15]);
+		//translate([-52.5,21,0])
+		//	cube([10.5,10,15]);
+		translate([5.96,24.5,15.15]) rotate([0,0,0])
+			cube([2.04,6,2]);
+		translate([-54.02,24.5,15.15]) rotate([0,0,0])
+			cube([2.04,6,2]);
+		translate([2,28,2])
+			#cylinder(h=0.3,r=3);
+		translate([-48,28,2])
+			#cylinder(h=0.3,r=3);
 		}
-		translate([0,28,13.15]) rotate([90,0,90])
-			cylinder(h=10,r=2.7/2, $fn=8);
-		translate([-46.5,28,13.15]) rotate([90,0,-90])
-			cylinder(h=10,r=2.7/2,$fn=8);
+		//translate([-3,28,13.15]) rotate([90,0,90])
+		//	cylinder(h=12,r=2.7/2, $fn=8);
+		//translate([-43.5,28,13.15]) rotate([90,0,-90])
+		//	cylinder(h=12,r=2.7/2,$fn=8);
 	}
 
 }

@@ -17,15 +17,23 @@ module x_motor_body()
 	difference(){
 		union(){
 		translate([0,0,0]) rotate([0,0,90]) import_stl("../stl/x-motor-bracket_.stl");
-		translate([-2.5,48,20.15]) rotate([90,0,90])
-			bushing(true,10);
-		translate([-53.5,48,20.15]) rotate([90,0,90])
-			bushing(true,10);
+		//translate([-4,48,20.15]) rotate([90,0,90])
+		//	bushing(true,11);
+		//translate([-53,48,20.15]) rotate([90,0,90])
+		//	bushing(true,11);
+		translate([5.96,45,15.15]) rotate([0,0,0])
+			cube([2.04,8,2]);
+		translate([-54.02,45,15.15]) rotate([0,0,0])
+			cube([2.04,8,2]);
+		translate([2,49,2])
+			#cylinder(h=0.3,r=3);
+		translate([-48,49,2])
+			#cylinder(h=0.3,r=3);
 		}
-		translate([0,48,13.15]) rotate([90,0,90])
-			cylinder(h=10,r=2.7/2, $fn=8);
-		translate([-46.5,48,13.15]) rotate([90,0,-90])
-			cylinder(h=10,r=2.7/2,$fn=8);
+		//translate([-5,48,13.15]) rotate([90,0,90])
+		//	cylinder(h=16,r=2.7/2, $fn=8);
+		//translate([-41.5,48,13.15]) rotate([90,0,-90])
+		//	cylinder(h=16,r=2.7/2,$fn=8);
 	}
 }
 //bushing holder socket

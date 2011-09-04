@@ -16,7 +16,7 @@ include <configuration.scad>
  */ 
 
 rodsize = 7.2+0.2;
-outerDiameter = bushing_outerDiameter;
+outerDiameter = bushing_outerDiameter+2;
 lenght = bushing_lenght;
 //type = bushing_type;
 cutoutWidth=1.2;

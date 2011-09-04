@@ -106,8 +106,15 @@ translate([30,75,0])
 	motor_split2();
 	}
 }
-
-platenum=4;
+module upplate7(){
+		translate([35,8,0]) rotate([0,0,0]) x_motor_body();
+		translate([92,0,0]) rotate([0,0,0]) x_idler_body();
+		for(i=[0,1]){
+			translate([52+i*16,72,0]) rotate([0,0,0]) import_stl("../stl/igus-holder.stl");
+			translate([52+i*16,7,0]) rotate([0,0,0]) import_stl("../stl/igus-holder.stl");
+		}
+}
+platenum=7;
 %cube(size=[130,130,0.01],center=true);
 if(platenum==1)
 	translate([-43,-49,0]) upplate1();
@@ -121,6 +128,8 @@ if(platenum==5)
 	translate([-44,-49,0]) upplate5();
 if(platenum==6)
 	translate([-44,-49,0]) upplate6();
+if(platenum==7)
+	translate([-44,-49,0]) upplate7();
 if(platenum==99){
 %translate([140,0,0]) cube(size=[130,130,0.01],center=true);
 %translate([280,0,0]) cube(size=[130,130,0.01],center=true);
