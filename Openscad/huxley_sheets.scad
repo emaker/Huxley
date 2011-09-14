@@ -107,7 +107,7 @@ translate([30,75,0])
 	}
 }
 
-platenum=4;
+platenum=2;
 %cube(size=[130,130,0.01],center=true);
 if(platenum==1)
 	translate([-43,-49,0]) upplate1();
