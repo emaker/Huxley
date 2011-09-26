@@ -107,12 +107,11 @@ translate([30,75,0])
 	}
 }
 module upplate7(){
-		translate([35,8,0]) rotate([0,0,0]) x_motor_body();
-		translate([92,0,0]) rotate([0,0,0]) x_idler_body();
-		for(i=[0,1]){
-			translate([52+i*16,72,0]) rotate([0,0,0]) import_stl("../stl/igus-holder.stl");
-			translate([52+i*16,7,0]) rotate([0,0,0]) import_stl("../stl/igus-holder.stl");
-		}
+		translate([-10,0,0]) rotate([0,0,0]) import_stl("../stl/x-motor-bracket.stl");
+		translate([-30,50,0]) rotate([0,0,0]) import_stl("../stl/x-idler-bracket.stl");
+		translate([80,67,0]) rotate([0,0,90]) import_stl("../stl/x-carriage.stl");
+		translate([90,67,0]) rotate([0,0,90]) import_stl("../stl/bearing-holder-fixed.stl");
+		translate([80,67,0]) rotate([0,0,90]) import_stl("../stl/bearing-holder-float.stl");
 }
 platenum=7;
 %cube(size=[130,130,0.01],center=true);

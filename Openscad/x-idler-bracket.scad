@@ -29,17 +29,22 @@ module x_idler_body()
 			cube([2.04,6,2]);
 		translate([-54.02,24.5,15.15]) rotate([0,0,0])
 			cube([2.04,6,2]);
-		translate([2,28,2])
-			#cylinder(h=0.3,r=3);
-		translate([-48,28,2])
-			#cylinder(h=0.3,r=3);
 		}
+		for(i=[2,-48]){
+		translate([i,28,0]) union(){
+			cylinder(h=2,r=2);
+			cylinder(h=25,r=2.7/2);
+			translate([0,0,5+9.15]) cube([8,8,10],center=true);
+		}}
 		//translate([-3,28,13.15]) rotate([90,0,90])
 		//	cylinder(h=12,r=2.7/2, $fn=8);
 		//translate([-43.5,28,13.15]) rotate([90,0,-90])
 		//	cylinder(h=12,r=2.7/2,$fn=8);
 	}
-
+	translate([2,28,2])
+		#cylinder(h=0.3,r=3);
+	translate([-48,28,2])
+		#cylinder(h=0.3,r=3);
 }
 //bushing holder socket
 module bushing_socket()
