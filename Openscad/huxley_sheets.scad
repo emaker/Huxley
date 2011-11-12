@@ -27,7 +27,7 @@ module upplate1(){
 	translate([54,90,0]) rotate([0,0,0]) coupling(1);
 	translate([82,90,0]) rotate([0,0,0]) coupling(0);
 	translate([38,16,0]) rotate([0,0,0]) import_stl("../stl/idler-cover.stl");
-	translate([-4,0,0]) rotate([0,0,60]) idler_split2();
+	translate([5,5,0]) rotate([0,0,85]) idler_split2();
 	}//end union
 }
 
@@ -49,8 +49,8 @@ module upplate3(){
 	translate([0,0,0]) rotate([0,0,0]) union()
 	{
 		//translate([58,60,0]) rotate([0,0,-90]) import_stl("../stl/nozzle-mounting.stl");
-		translate([-20,65,0]) rotate([0,0,0]) large_gear();
-		translate([56,10,0]) rotate([0,0,0])
+		translate([-20,70,0]) rotate([0,0,0]) large_gear();
+		translate([51,10,0]) rotate([0,0,0])
 			union(){
 				import_stl("../stl/M6-Block.stl");
 				translate([-5,-5,5]) cube([10,10,0.3]);
@@ -61,9 +61,9 @@ module upplate3(){
 		//translate([100,40,0]) rotate([0,0,90]) beltclamp();
 		//translate([60,83,0]) rotate([0,0,0]) beltclamp();
 		//translate([0,20,0]) rotate([0,0,-90]) endstop();
-		translate([28,10,0]) idler_split1();
-		translate([47,77,0]) rotate([0,0,-5]) motor_split1();
-		translate([57,24,0]) rotate([0,0,20]) motor_split2();
+		translate([22,9,0]) rotate([0,0,-15]) idler_split1();
+		translate([70,57,0]) rotate([0,0,100]) motor_split1();
+		translate([88,42,0]) rotate([0,0,15]) motor_split2();
 	}
 }
 module upplate4(){
@@ -100,7 +100,7 @@ module upplate7(){
 		translate([90,67,0]) rotate([0,0,90]) import_stl("../stl/bearing-holder-fixed.stl");
 		translate([80,67,0]) rotate([0,0,90]) import_stl("../stl/bearing-holder-float.stl");
 }
-platenum=1;
+platenum=3;
 %cube(size=[130,130,0.01],center=true);
 if(platenum==1)
 	translate([-43,-49,0]) upplate1();

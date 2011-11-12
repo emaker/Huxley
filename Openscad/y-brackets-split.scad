@@ -29,10 +29,10 @@ module motor_split1()
 {
 	difference()
 	{
-		translate([0,0,0]) rotate([0,0,0]) import_stl("../stl/y-motor-bracket.stl");
+		translate([0,0,14]) rotate([0,0,0]) rotate([180,0,0])  import_stl("../stl/y-motor-bracket.stl");
 		difference(){
 			translate([-50,-50,3.5]) cube([100,100,20]);
-			#translate([37.05,-12,3.5]) cylinder(r=11,h=3);
+			#translate([37.05,12,3.5]) cylinder(r=11,h=3);
 		}
 	}
 }
@@ -49,9 +49,9 @@ module motor_split2()
 	}
 }
 
-translate([-10,15,0]) rotate([0,0,-120])
-	idler_split1();
-idler_split2();
+//translate([-10,15,0]) rotate([0,0,-120])
+//	idler_split1();
+//idler_split2();
 
 translate([-50,55,0])
 	motor_split1();
