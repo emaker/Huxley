@@ -7,6 +7,7 @@ use <x-motor-bracket.scad>
 use <pla_coupling.scad>
 use <y-brackets-split.scad>
 use <z-endstop-holder.scad>
+use <tongue.scad>
 
 
 module upplate1(){
@@ -64,6 +65,7 @@ module upplate3(){
 		translate([22,9,0]) rotate([0,0,-15]) idler_split1();
 		translate([70,57,0]) rotate([0,0,100]) motor_split1();
 		translate([88,42,0]) rotate([0,0,15]) motor_split2();
+		translate([82,95,0]) rotate([0,0,90]) tongue();
 	}
 }
 module upplate4(){

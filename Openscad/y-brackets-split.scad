@@ -53,7 +53,7 @@ module motor_split2()
 //	idler_split1();
 //idler_split2();
 
-translate([-50,55,0])
-	motor_split1();
-translate([30,77,0])
+//translate([-50,55,0])
+//	motor_split1();
+//translate([30,77,0])
 	motor_split2();
